@@ -1,0 +1,43 @@
+// FontAwesome
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+@font-face {
+    font-family: "graphikbold";
+    src:
+        url("../fonts/graphikbold-webfont.woff2") format("woff2"),
+        url("../fonts/graphikbold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "graphiklight";
+    src:
+        url("../fonts/graphiklight-webfont.woff2") format("woff2"),
+        url("../fonts/graphiklight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "graphikmedium";
+    src:
+        url("../fonts/graphikmedium-webfont.woff2") format("woff2"),
+        url("../fonts/graphikmedium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "graphik_regularregular";
+    src:
+        url("../fonts/graphikregular-webfont.woff2") format("woff2"),
+        url("../fonts/graphikregular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

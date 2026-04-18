@@ -1,0 +1,1106 @@
+// ============================================================
+//  Grupo San Francisco — main.scss
+//  Estructura: Variables → Base → Componentes → Secciones → Footer
+// ============================================================
+
+// ─── CSS CUSTOM PROPERTIES (para compatibilidad Bootstrap) ───
+:root {
+    --rojo: #{$rojo};
+    --negro: #{$negro};
+    --gris-oscuro: #{$gris-oscuro};
+    --gris-medio: #{$gris-medio};
+    --gris-claro: #{$gris-claro};
+    --blanco: #{$blanco};
+    --font-titulo: #{$font-titulo};
+    --font-body: #{$font-body};
+}
+
+// ─── BASE ─────────────────────────────────────────────────────
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    font-family: $font-body;
+    @include font-size(1.2rem);
+    color: $negro;
+    background: $blanco;
+}
+
+a {
+    color: $rojo;
+}
+
+h2 {
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-family: $font-titulo;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: $negro;
+    margin-bottom: 8px;
+
+    em {
+        color: $rojo;
+        font-style: normal;
+    }
+}
+
+// ─── ANIMACIONES ──────────────────────────────────────────────
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.6s ease both;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+.delay-2 {
+    animation-delay: 0.2s;
+}
+.delay-3 {
+    animation-delay: 0.35s;
+}
+.delay-4 {
+    animation-delay: 0.45s;
+}
+
+// ─── BOTONES ──────────────────────────────────────────────────
+.btn-rojo {
+    background: $rojo;
+    color: $blanco;
+    border: none;
+    border-radius: $border-radius-base;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 6px 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition:
+        background $transition-base,
+        transform 0.15s;
+
+    &:hover {
+        background: $rojo-dark;
+        color: $blanco;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-outline-dark-sm {
+    border: 1.5px solid $negro;
+    color: $negro;
+    border-radius: $border-radius-base;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 7px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all $transition-base;
+
+    &:hover {
+        background: $negro;
+        color: $blanco;
+    }
+}
+
+.btn-negro {
+    background: $negro;
+    color: $blanco;
+    border: none;
+    border-radius: $border-radius-base;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 6px 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition:
+        background $transition-base,
+        transform 0.15s;
+
+    &:hover {
+        background: $gris-oscuro;
+        color: $blanco;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-outline-blanco {
+    border: 1.5px solid $blanco;
+    color: $blanco;
+    border-radius: $border-radius-base;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 7px 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all $transition-base;
+
+    &:hover {
+        background: $blanco;
+        color: $negro;
+    }
+}
+
+// ─── HELPERS DE SECCIÓN ───────────────────────────────────────
+.section-title {
+    font-family: $font-titulo;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: $negro;
+    margin-bottom: 8px;
+
+    em {
+        color: $rojo;
+        font-style: normal;
+    }
+}
+
+.section-subtitle {
+    margin-bottom: 40px;
+}
+
+// Placeholder imgs
+.img-placeholder {
+    background: linear-gradient(135deg, #2a2a2a 0%, #444 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba($blanco, 0.2);
+    font-size: 2rem;
+
+    &-light {
+        background: linear-gradient(135deg, #ddd 0%, #bbb 100%);
+    }
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.py-72 {
+    padding: 72px 0;
+}
+
+.pt-72 {
+    padding-top: 72px;
+}
+
+.pb-72 {
+    padding-bottom: 72px;
+}
+
+.py-36 {
+    padding: 36px 0;
+}
+
+.pt-36 {
+    padding-top: 36px;
+}
+
+.pb-36 {
+    padding-bottom: 36px;
+}
+
+// ─── NAVBAR ───────────────────────────────────────────────────
+.navbar {
+    background: $blanco;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    &-brand {
+        img {
+            height: 38px;
+        }
+
+        span {
+            font-family: $font-titulo;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $negro;
+        }
+    }
+}
+
+.nav-link {
+    border: 1px solid $negro !important;
+    @include font-size(1rem);
+    font-weight: 600;
+    color: $gris-oscuro !important;
+    letter-spacing: 0.04em;
+    padding: 0 14px !important;
+    transition: color $transition-base;
+
+    &:hover {
+        background-color: $blanco;
+        color: $rojo !important;
+    }
+
+    &.active {
+        background-color: $rojo;
+        color: $white !important;
+    }
+}
+
+.nav-idioma {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $gris-medio;
+    border: 1px solid #ddd;
+    border-radius: $border-radius-base;
+    padding: 3px 8px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition:
+        border-color $transition-base,
+        color $transition-base;
+
+    &:hover {
+        border-color: $rojo;
+        color: $rojo;
+    }
+}
+
+// ─── HERO ─────────────────────────────────────────────────────
+.hero-section {
+    position: relative;
+}
+
+.hero-headline {
+    padding: 52px 0 24px;
+
+    h1 {
+        font-family: $font-titulo-bold;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 900;
+        color: $negro;
+        letter-spacing: -0.03em;
+
+        em {
+            color: $rojo;
+            font-style: normal;
+        }
+    }
+}
+
+.hero-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        height: 260px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 40%;
+    }
+}
+
+.hero-btn-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+// ─── GRUPO EMPRESARIAL ────────────────────────────────────────
+.grupo-section {
+    background: $blanco;
+    padding: 0;
+
+    .row {
+        align-items: stretch;
+    }
+
+    .col-lg-6:last-child {
+        position: relative;
+
+        @media (max-width: 991px) {
+            position: static;
+        }
+    }
+}
+
+.swiperGrupo {
+    position: absolute;
+    inset: 0;
+
+    @media (max-width: 991px) {
+        position: relative;
+        min-height: 280px;
+    }
+
+    .swiper-wrapper,
+    .swiper-slide {
+        height: 100%;
+    }
+}
+
+.grupo-texto {
+    background: $gris-medio-light;
+    padding: 56px 48px 56px 0;
+
+    @media (max-width: 991px) {
+        padding: 40px 20px;
+    }
+
+    .tarjeta {
+        border: 1px solid $negro;
+        border-radius: 30px;
+        overflow: hidden;
+
+        .contenedor-texto {
+            padding: 15px;
+        }
+
+        .pie {
+            background-color: $rojo;
+            text-align: right;
+
+            .btn-negro {
+                &:hover {
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 700;
+        color: $negro;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $negro;
+        margin-bottom: 14px;
+    }
+}
+
+.grupo-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    @media (max-width: 991px) {
+        position: relative;
+        min-height: 280px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.55) contrast(1.1);
+        position: absolute;
+        inset: 0;
+    }
+}
+
+// ─── MARCAS ───────────────────────────────────────────────────
+.marcas-section {
+    padding: 72px 0 36px;
+}
+
+.marca-card {
+    border: 1px solid $negro;
+    border-radius: 30px;
+    overflow: hidden;
+    background: $blanco;
+    height: 100%;
+    @include font-size(0.9rem);
+    transition:
+        box-shadow 0.25s,
+        transform $transition-base;
+
+    &:hover {
+        box-shadow: 0 8px 32px rgba($negro, 0.1);
+        transform: translateY(-3px);
+    }
+
+    &-img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    &-body {
+        padding: 18px 20px 22px;
+
+        p {
+            color: $gris-medio;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.marca-logo {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.marca-logo-text {
+    font-family: $font-titulo;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $negro;
+    margin-bottom: 12px;
+    display: block;
+}
+
+// ─── CIFRAS ───────────────────────────────────────────────────
+.cifras-section {
+    padding: 36px 0 72px;
+}
+
+.cifra-card {
+    background: $blanco;
+    border-radius: 24px;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid $negro;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+}
+
+.cifra-card-inner {
+    border: 1px solid $negro;
+    border-radius: 12px;
+    height: 100%;
+    padding: 0 0 28px;
+    overflow: hidden;
+}
+
+.cifra-numero {
+    background-color: $negro;
+    font-family: $font-titulo;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: $blanco;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 8px;
+    padding: 10px 10px 15px;
+}
+
+.cifra-label {
+    color: $gris-medio;
+    font-weight: 500;
+    max-width: 120px;
+    padding-left: 10px;
+}
+
+.cifra-icon {
+    background-color: $rojo;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 15px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 2rem;
+    color: $blanco;
+}
+
+// ─── NUESTRA GENTE ────────────────────────────────────────────
+.gente-section {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        min-height: 380px;
+    }
+}
+
+.gente-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.1);
+    z-index: 0;
+}
+
+.gente-content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0 0;
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 500;
+        color: $blanco;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: rgba($blanco, 1);
+        margin-bottom: 14px;
+    }
+}
+
+.gente-btn-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+// ─── DESCANSO GENÉRICO ────────────────────────────────────────────
+.descanso-section {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        min-height: 380px;
+    }
+}
+
+.descanso-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.1);
+    z-index: 0;
+}
+
+.descanso-content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0;
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 500;
+        color: $blanco;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: rgba($blanco, 1);
+        margin-bottom: 14px;
+    }
+
+    span {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: -48px;
+            right: -90px;
+            width: 120px;
+            height: 120px;
+            content: "";
+            background: url("../images/logo-footer@2x.png") no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.descanso-btn-overlay {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+// ─── SECCIÓN TIPO 1 ───────────────────────────────────────
+.seccion-tipo-1-section {
+    padding: 0;
+    overflow: hidden;
+
+    .row {
+        align-items: stretch;
+    }
+
+    .col-lg-6:first-child {
+        position: relative;
+
+        @media (max-width: 991px) {
+            position: static;
+        }
+    }
+}
+
+.seccion-tipo-1-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    @media (max-width: 991px) {
+        position: relative;
+        min-height: 260px;
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.seccion-tipo-1-texto {
+    background: $rojo;
+    color: $blanco;
+    padding: 64px 56px 64px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 991px) {
+        padding: 44px 24px;
+    }
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        font-weight: 500;
+        color: $blanco;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: rgba($blanco, 1);
+        margin-bottom: 14px;
+    }
+}
+
+// ─── SECCIÓN TIPO 2 ───────────────────────────────────────
+.seccion-tipo-2-section {
+    padding: 0;
+    overflow: hidden;
+
+    .row {
+        align-items: stretch;
+    }
+
+    .col-lg-6:first-child {
+        position: relative;
+
+        @media (max-width: 991px) {
+            position: static;
+        }
+    }
+}
+
+.seccion-tipo-2-img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    @media (max-width: 991px) {
+        position: relative;
+        min-height: 260px;
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.seccion-tipo-2-texto {
+    background: $gris-oscuro;
+    color: $blanco;
+    padding: 64px 56px 64px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 991px) {
+        padding: 44px 24px;
+    }
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        font-weight: 500;
+        color: $blanco;
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: rgba($blanco, 1);
+        margin-bottom: 14px;
+    }
+}
+
+// ─── INSIGHTS ───────────────────────────────────────────────────
+.insights-section {
+    padding: 72px 0 32px;
+}
+
+.insight-card {
+    border: 1px solid $negro;
+    border-radius: 30px;
+    overflow: hidden;
+    background: $blanco;
+    height: 100%;
+    @include font-size(0.9rem);
+    transition:
+        box-shadow 0.25s,
+        transform $transition-base;
+
+    &:hover {
+        box-shadow: 0 8px 32px rgba($negro, 0.1);
+        transform: translateY(-3px);
+    }
+
+    &-img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    &-body {
+        padding: 18px 20px 22px;
+
+        p {
+            color: $gris-medio;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.insight-date {
+    @include font-size(0.8rem);
+    font-weight: 500;
+    color: $gris-medio;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.insight-title {
+    font-family: $font-titulo;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $negro;
+    margin-bottom: 12px;
+    display: block;
+    text-decoration: none;
+}
+
+// ─── PRESENCIA ─────────────────────────────────────────────
+.presencia-section {
+    padding: 36px 0 0;
+    background: $blanco;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        position: relative;
+        left: 0;
+        top: -37px;
+    }
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 700;
+        color: $negro;
+        margin-bottom: 8px;
+
+        em {
+            color: $rojo;
+            font-style: normal;
+        }
+    }
+
+    p {
+        color: $gris-medio;
+        margin-bottom: 24px;
+    }
+
+    ul {
+        font-weight: bold;
+    }
+}
+
+// ─── CTA CONTACTO ─────────────────────────────────────────────
+.cta-section {
+    padding: 36px 0 72px;
+    background: $blanco;
+
+    h2 {
+        font-family: $font-titulo;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 700;
+        color: $negro;
+        margin-bottom: 8px;
+
+        em {
+            color: $rojo;
+            font-style: normal;
+        }
+    }
+
+    p {
+        color: $gris-medio;
+        margin-bottom: 24px;
+    }
+}
+
+// ─── RED CARDS ───────────────────────────────────────────────────
+.red-cards-section {
+    padding: 36px 0 72px;
+}
+
+.red-cards-section-card {
+    background: $rojo;
+    border-radius: 24px;
+    color: $blanco;
+    padding: 30px 54px 30px 30px;
+    text-align: left;
+    border: 1px solid $rojo;
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        @include font-size(0.9rem);
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+}
+
+.red-cards-section-card-icon {
+    padding: 15px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    color: $blanco;
+}
+
+// ─── GRAY CARDS ───────────────────────────────────────────────────
+.gray-cards-section {
+    padding: 36px 0 72px;
+}
+
+.gray-cards-section-card {
+    background: $gris-oscuro;
+    border-radius: 24px;
+    color: $blanco;
+    padding: 30px 54px 30px 30px;
+    text-align: left;
+    border: 1px solid $rojo;
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        @include font-size(0.9rem);
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+}
+
+.gray-cards-section-card-icon {
+    padding: 15px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    color: $blanco;
+}
+
+// ─── GSF SECTION ───────────────────────────────────────────────────
+.gsf-section {
+    .red-cards-section-card {
+        min-height: 110px;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        .red-cards-section-card-icon {
+            top: 22px;
+        }
+    }
+}
+
+// ─── CONTACTO ───────────────────────────────────────────────────
+.contacto-section {
+    .form-control {
+        background-color: $gris-medio-light;
+        border-radius: 50rem;
+        overflow: hidden;
+    }
+
+    #mensaje {
+        border-radius: 20px;
+    }
+
+    button[type="submit"] {
+        background-color: $rojo;
+        color: $blanco;
+        border: none;
+    }
+
+    .form-floating > label {
+        left: 20px;
+    }
+
+    .form-floating > .form-control,
+    .form-floating > .form-control-plaintext {
+        padding-left: 20px;
+    }
+
+    .form-floating > textarea:focus ~ label::after,
+    .form-floating > textarea:not(:placeholder-shown) ~ label::after {
+        background-color: transparent;
+    }
+}
+
+// ─── FOOTER ───────────────────────────────────────────────────
+footer {
+    background: $rojo;
+    color: $blanco;
+    padding: 90px 0 24px;
+
+    a {
+        color: $blanco;
+    }
+}
+
+.footer-tagline {
+    font-family: $font-titulo;
+    font-size: clamp(2rem, 2rem, 2rem);
+    font-weight: 500 !important;
+    color: $blanco;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        position: absolute;
+        top: -39px;
+        right: -90px;
+        width: 120px;
+        height: 120px;
+        content: "";
+        background: url("../images/logo-footer@2x.png") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.footer-social {
+    a {
+        border-radius: 50px;
+        color: rgba($blanco, 1);
+        font-size: 1.2rem;
+        margin-right: 14px;
+        text-decoration: none;
+        transition: color $transition-base;
+
+        &:hover {
+            color: $blanco;
+        }
+    }
+}
+
+.footer-title {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    color: rgba($blanco, 1);
+}
+
+.footer-link {
+    display: block;
+    color: rgba($blanco, 1);
+    text-decoration: none;
+    font-weight: light;
+    transition: color $transition-base;
+    @include font-size(1.2rem);
+
+    &:hover {
+        color: $blanco;
+    }
+}
+
+.footer-address {
+    color: rgba($blanco, 1);
+    @include font-size(1.2rem);
+}
+
+.footer-divider {
+    border-color: rgba($blanco, 0.2);
+    margin: 36px 0 20px;
+}
+
+.footer-bottom {
+    font-size: 0.75rem;
+    color: rgba($blanco, 0.55);
+}
