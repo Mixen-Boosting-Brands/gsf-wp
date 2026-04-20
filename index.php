@@ -71,7 +71,9 @@
 
                         <div class="pie">
                             <a
-                                href="#"
+                                href="<?php echo esc_url(
+                                    home_url("/"),
+                                ); ?>nosotros"
                                 class="btn-negro"
                                 style="padding: 12px 40px"
                                 >Conoce el grupo</a
@@ -265,36 +267,51 @@
         </p>
 
         <?php
-        $delays = [ '', 'delay-1', 'delay-2' ];
-        $insights = new WP_Query( [
-            'post_type'      => 'post',
-            'post_status'    => 'publish',
-            'posts_per_page' => 3,
-            'orderby'        => 'date',
-            'order'          => 'DESC',
-        ] );
+        $delays = ["", "delay-1", "delay-2"];
+        $insights = new WP_Query([
+            "post_type" => "post",
+            "post_status" => "publish",
+            "posts_per_page" => 3,
+            "orderby" => "date",
+            "order" => "DESC",
+        ]);
         ?>
 
-        <?php if ( $insights->have_posts() ) : ?>
+        <?php if ($insights->have_posts()): ?>
         <div class="row g-0">
-            <?php $i = 0; while ( $insights->have_posts() ) : $insights->the_post(); ?>
+            <?php
+            $i = 0;
+            while ($insights->have_posts()):
+                $insights->the_post(); ?>
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                <div class="insight-card animate-fade-up <?php echo esc_attr( $delays[ $i ] ); ?>">
+                <div class="insight-card animate-fade-up <?php echo esc_attr(
+                    $delays[$i],
+                ); ?>">
                     <a href="<?php the_permalink(); ?>">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large', [ 'class' => 'insight-card-img', 'alt' => get_the_title() ] ); ?>
-                        <?php else : ?>
+                        <?php if (has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail("large", [
+                                "class" => "insight-card-img",
+                                "alt" => get_the_title(),
+                            ]); ?>
+                        <?php else: ?>
                             <div class="insight-card-img img-placeholder"></div>
                         <?php endif; ?>
                     </a>
                     <div class="insight-card-body">
-                        <span class="insight-date"><?php echo esc_html( get_the_date() ); ?></span>
+                        <span class="insight-date"><?php echo esc_html(
+                            get_the_date(),
+                        ); ?></span>
                         <a href="<?php the_permalink(); ?>" class="insight-title"><?php the_title(); ?></a>
-                        <p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
+                        <p><?php echo esc_html(
+                            wp_trim_words(get_the_excerpt(), 20),
+                        ); ?></p>
                     </div>
                 </div>
             </div>
-            <?php $i++; endwhile; wp_reset_postdata(); ?>
+            <?php $i++;
+            endwhile;
+            wp_reset_postdata();
+            ?>
         </div>
         <?php endif; ?>
     </div>
