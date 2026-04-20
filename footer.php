@@ -91,6 +91,8 @@
 
         <?php wp_footer(); ?>
 
-        <script src="./assets/js/app.bundle.js" defer></script>
+        <script src="<?php echo esc_url(
+            get_template_directory_uri(),
+        ); ?>/assets/js/app.bundle.js" defer></script>
     </body>
 </html>
