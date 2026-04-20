@@ -1,71 +1,96 @@
 <?php get_header(); ?>
 
-	<main role="main" aria-label="Content">
-	<!-- section -->
-	<section>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+<!-- ═══ HERO ════════════════════════════════════════ -->
+<section class="hero-section">
+    <div class="hero-headline container animate-fade-up">
+        <div class="row align-items-end">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <span class="insight-date">
+                    <time datetime="<?php the_time( 'Y-m-d' ); ?>">
+                        <?php echo esc_html( get_the_date() ); ?>
+                    </time>
+                    <?php
+                    $categories = get_the_category();
+                    if ( $categories ) :
+                        echo ' &nbsp;·&nbsp; ';
+                        echo esc_html( $categories[0]->name );
+                    endif;
+                    ?>
+                </span>
+                <h1><?php the_title(); ?></h1>
+            </div>
+        </div>
+    </div>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php if ( has_post_thumbnail() ) : ?>
+        <div class="hero-img-wrap">
+            <?php the_post_thumbnail( 'full', [ 'alt' => get_the_title() ] ); ?>
+        </div>
+    <?php endif; ?>
+</section>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post. ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+<!-- ═══ CONTENIDO ════════════════════════════════════════ -->
+<section class="py-72">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <?php the_content(); ?>
+                    <?php wp_link_pages(); ?>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+                    <?php
+                    $tags = get_the_tags();
+                    if ( $tags ) : ?>
+                        <div class="mt-4 d-flex flex-wrap gap-2">
+                            <?php foreach ( $tags as $tag ) : ?>
+                                <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>"
+                                   class="btn-outline-dark-sm rounded-pill">
+                                    <?php echo esc_html( $tag->name ); ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
 
-			<!-- post details -->
-			<span class="date">
-				<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
-					<?php the_date(); ?> <?php the_time(); ?>
-				</time>
-			</span>
-			<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
-			<!-- /post details -->
+                    <?php edit_post_link(); ?>
+                </article>
 
-			<?php the_content(); // Dynamic Content. ?>
+                <!-- Navegación entre entradas -->
+                <nav class="d-flex justify-content-between mt-5 pt-4" style="border-top: 1px solid #e8e8e8;">
+                    <div><?php previous_post_link( '%link', '&larr; %title' ); ?></div>
+                    <div><?php next_post_link( '%link', '%title &rarr;' ); ?></div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>' ); // Separated by commas with a line break at the end. ?>
+<?php endwhile; ?>
 
-			<p><?php esc_html_e( 'Categorised in: ', 'html5blank' ); the_category( ', ' ); // Separated by commas. ?></p>
+<?php else : ?>
 
-			<p><?php esc_html_e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+<!-- ═══ HERO ════════════════════════════════════════ -->
+<section class="hero-section">
+    <div class="hero-headline container animate-fade-up">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1><?php esc_html_e( 'Entrada no encontrada', 'gsf' ); ?></h1>
+            </div>
+        </div>
+    </div>
+</section>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
+<section class="py-72">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p><?php esc_html_e( 'No hay contenido disponible.', 'gsf' ); ?></p>
+            </div>
+        </div>
+    </div>
+</section>
 
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else : ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
