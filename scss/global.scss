@@ -1233,3 +1233,54 @@ footer {
     font-size: 0.75rem;
     color: rgba($blanco, 0.55);
 }
+
+// ─── TRANSLATEPRESS SWITCHER ──────────────────────────────────────
+.trp-switcher-wrap {
+    // Elimina márgenes/listas del contenedor generado por el plugin
+    .trp-language-switcher,
+    .trp-ls-shortcode {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 0;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        // Idioma activo: se oculta, solo se muestra el alternativo
+        // Si prefieres mostrar ambos, elimina estas líneas
+        .trp-ls-shortcode-current-language {
+            display: none;
+        }
+
+        a {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: $gris-medio;
+            border: 1px solid #ddd;
+            border-radius: $border-radius-base;
+            padding: 3px 8px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: border-color $transition-base, color $transition-base;
+            display: inline-block;
+
+            &:hover {
+                border-color: $rojo;
+                color: $rojo;
+            }
+
+            // Oculta banderas si el plugin las inserta
+            img { display: none; }
+        }
+    }
+}
