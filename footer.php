@@ -31,13 +31,12 @@
                             Conectando experiencias,<br />marcas y personas.
                         </h1>
                         <div class="footer-social mt-2">
-                            <a href="#"
+                            <a href="https://www.instagram.com/gsfcorp/" target="_blank"
                                 ><i class="fa-brands fa-instagram"></i
                             ></a>
-                            <a href="#"
-                                ><i class="fa-brands fa-x-twitter"></i
+                            <a href="https://www.facebook.com/p/Grupo-San-Francisco-61560142205094/" target="_blank"
+                                ><i class="fa-brands fa-facebook-f"></i
                             ></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
 
