@@ -58,28 +58,28 @@
                     <ul
                         class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0"
                     >
-                        <li class="nav-item">
+                        <li class="nav-item mb-3 mb-lg-0">
                             <a class="nav-link rounded-pill" href="<?php echo esc_url(
                                 home_url("/"),
                             ); ?>nosotros"
                                 >Nosotros</a
                             >
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mb-3 mb-lg-0">
                             <a class="nav-link rounded-pill" href="<?php echo esc_url(
                                 home_url("/"),
                             ); ?>marcas"
                                 >Marcas</a
                             >
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mb-3 mb-lg-0">
                             <a class="nav-link rounded-pill" href="<?php echo esc_url(
                                 home_url("/"),
                             ); ?>personas-y-cultura"
                                 >Personas y Cultura</a
                             >
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mb-3 mb-lg-0">
                             <a class="nav-link rounded-pill" href="<?php echo esc_url(
                                 home_url("/"),
                             ); ?>contacto"
