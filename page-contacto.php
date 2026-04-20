@@ -23,13 +23,7 @@ get_header(); ?>
                 </p>
                 <ul class="mb-4">
                     <li>
-                        <a href="tel:+526141274563"
-                            >+52 (614) 127-4563</a
-                        >
-                        |
-                        <a href="tel:+526143445567"
-                            >+52 (614) 344-5567</a
-                        >
+                        <a href="tel:+526144255315">+52 614 425 5315</a>
                     </li>
                     <li>
                         <a href="mailto:contacto@gruposanfco.com"

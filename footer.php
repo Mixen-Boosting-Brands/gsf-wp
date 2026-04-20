@@ -64,7 +64,7 @@
                             Paseo de las Palmas, Residencial San Francisco,
                             31125 Chihuahua, Chih., México
                             <br /><br />
-                            <a href="tel:+526141234567">(614) 123-4567</a> &nbsp;|&nbsp; <a href="mailto:contacto@gsf.com">contacto@gsf.com</a>
+                            <a href="tel:+526144255315">+52 614 425 5315</a> &nbsp;|&nbsp; <a href="mailto:contacto@gsf.com">contacto@gsf.com</a>
                         </address>
                     </div>
                 </div>
