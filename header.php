@@ -86,9 +86,9 @@
                                 >Contacto</a
                             >
                         </li>
-                        <!-- li class="nav-item ms-lg-3 mt-2 mt-lg-0 trp-switcher-wrap">
-                            EN / ES
-                        </li -->
+                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0 trp-switcher-wrap">
+                            <?php echo do_shortcode("[language-switcher]"); ?>
+                        </li>
                     </ul>
                 </div>
             </div>
