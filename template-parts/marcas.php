@@ -30,7 +30,7 @@
                             ); ?>/assets/images/marcas/logos/mcdonalds@2x.png"
                             alt="McDonald's"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://www.mcdonalds.com.mx/" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text">McDonald's</span>
@@ -59,7 +59,7 @@
                             ); ?>/assets/images/marcas/logos/smart-fit@2x.png"
                             alt="SmartFit"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://www.smartfit.com.mx/gimnasios" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text">SmartFit</span>
@@ -89,7 +89,7 @@
                             alt="Incredible Pizza"
                             style="max-width: 176px"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://incrediblepizzachihuahua.com/" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text"
@@ -123,7 +123,7 @@
                             ); ?>/assets/images/marcas/logos/sfcc@2x.png"
                             alt="San Francisco Country Club"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://sanfranciscocc.com/inicio/" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text"
@@ -154,7 +154,7 @@
                             ); ?>/assets/images/marcas/logos/comsa@2x.png"
                             alt="Comsa Steel"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://comsasteel.com/es/" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text">Comsa Steel</span>
@@ -184,7 +184,7 @@
                             alt="Audi"
                             style="max-width: 100px; margin: 7px 0"
                         />
-                        <a href="#" class="btn-negro rounded-pill my-3"
+                        <a href="https://www.audicenterchihuahua.com.mx/es/" class="btn-negro rounded-pill my-3" target="_blank"
                             >Visitar Sitio</a
                         >
                         <span class="marca-logo-text">Audi</span>
