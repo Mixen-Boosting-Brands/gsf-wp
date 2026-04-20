@@ -32,9 +32,8 @@ get_header(); ?>
                     </li>
                     <li>
                         <address>
-                            Industrial Chihuahua #7410,<br />
-                            Cerro Coronel. II, Aeropuerto,<br />
-                            31384 Chihuahua, Chih., México
+                            Vía Lombardía #5705 Int. 305, 31110,<br />
+                            Chihuahua, Chih., México
                         </address>
                     </li>
                 </ul>
