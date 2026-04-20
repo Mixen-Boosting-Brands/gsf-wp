@@ -61,8 +61,8 @@
                     <div class="col-6 col-lg-4">
                         <p class="footer-title">Contacto</p>
                         <address class="footer-address">
-                            Paseo de las Palmas, Residencial San Francisco,
-                            31125 Chihuahua, Chih., México
+                            Vía Lombardía #5705 Int. 305, 31110,<br />
+                            Chihuahua, Chih., México
                             <br /><br />
                             <a href="tel:+526144255315">+52 614 425 5315</a> &nbsp;|&nbsp; <a href="mailto:comunicacion@gsfcorp.com.mx">comunicacion@gsfcorp.com.mx</a>
                         </address>
