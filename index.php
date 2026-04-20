@@ -30,7 +30,9 @@
             alt="Vista del Cerro Coronel, Chihuahua, Chih., México"
         />
         <div class="hero-btn-overlay">
-            <a href="#" class="btn-negro rounded-pill"
+            <a href="<?php echo esc_url(
+                home_url("/"),
+            ); ?>nosotros" class="btn-negro rounded-pill"
                 >Conoce el grupo</a
             >
         </div>
