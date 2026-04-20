@@ -1,51 +1,95 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
-	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' : '; } ?><?php bloginfo( 'name' ); ?></title>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="<?php bloginfo("charset"); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="<?php bloginfo("description"); ?>" />
+        <title><?php
+        wp_title("");
+        if (wp_title("", false)) {
+            echo " - ";
+        }
+        bloginfo("name");
+        ?></title>
 
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
-		<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/icons/favicon.ico" rel="shortcut icon">
-		<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
-		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>" />
+        <link rel="stylesheet" href="<?php echo esc_url(
+            get_template_directory_uri(),
+        ); ?>/assets/css/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Manrope:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo(
+            "name",
+        ); ?>" href="<?php bloginfo("rss2_url"); ?>" />
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo( 'description' ); ?>">
+        <?php wp_head(); ?>
+    </head>
 
-		<?php wp_head(); ?>
-		<script>
-		// conditionizr.com
-		// configure environment tests
-		conditionizr.config({
-			assets: '<?php echo esc_url( get_template_directory_uri() ); ?>',
-			tests: {}
-		});
-		</script>
+    <body>
+        <!-- ═══ NAVBAR ══════════════════════════════════════ -->
+        <nav class="navbar navbar-expand-lg" role="navigation">
+            <div class="container">
+                <!-- Logo -->
+                <a
+                    class="navbar-brand d-flex align-items-center gap-2"
+                    href="<?php echo esc_url(home_url()); ?>"
+                >
+                    <img
+                        src="<?php echo esc_url(
+                            get_template_directory_uri(),
+                        ); ?>/assets/images/logo@2x.png"
+                        alt="<?php bloginfo("name"); ?>"
+                    />
+                </a>
 
-	</head>
-	<body <?php body_class(); ?>>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMain"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo esc_url( home_url() ); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->
+                <div class="collapse navbar-collapse" id="navMain">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0"
+                    >
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="<?php echo esc_url(
+                                home_url("/"),
+                            ); ?>nosotros"
+                                >Nosotros</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="<?php echo esc_url(
+                                home_url("/"),
+                            ); ?>marcas"
+                                >Marcas</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="<?php echo esc_url(
+                                home_url("/"),
+                            ); ?>personas-y-cultura"
+                                >Personas y Cultura</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill" href="<?php echo esc_url(
+                                home_url("/"),
+                            ); ?>contacto"
+                                >Contacto</a
+                            >
+                        </li>
+                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                            <a href="#" class="nav-idioma">ES / EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
