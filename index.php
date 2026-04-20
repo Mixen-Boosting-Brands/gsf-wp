@@ -264,92 +264,39 @@
             operamos, crecemos y generamos valor en cada industria.
         </p>
 
-        <!-- Fila 1 -->
+        <?php
+        $delays = [ '', 'delay-1', 'delay-2' ];
+        $insights = new WP_Query( [
+            'post_type'      => 'post',
+            'post_status'    => 'publish',
+            'posts_per_page' => 3,
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+        ] );
+        ?>
+
+        <?php if ( $insights->have_posts() ) : ?>
         <div class="row g-0">
+            <?php $i = 0; while ( $insights->have_posts() ) : $insights->the_post(); ?>
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                <div class="insight-card animate-fade-up">
-                    <a href="#">
-                        <img
-                            class="insight-card-img"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri(),
-                            ); ?>/assets/images/marcas/thumbnails/mcdonalds.png"
-                            alt=""
-                        />
+                <div class="insight-card animate-fade-up <?php echo esc_attr( $delays[ $i ] ); ?>">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <?php the_post_thumbnail( 'large', [ 'class' => 'insight-card-img', 'alt' => get_the_title() ] ); ?>
+                        <?php else : ?>
+                            <div class="insight-card-img img-placeholder"></div>
+                        <?php endif; ?>
                     </a>
                     <div class="insight-card-body">
-                        <span class="insight-date">1 enero, 2026</span>
-                        <a href="#" class="insight-title"
-                            >De la operación al liderazgo: cómo se
-                            construyen carreras dentro del grupo</a
-                        >
-                        <p>
-                            Detrás de cada unidad de negocio hay
-                            historias de crecimiento real. Este artículo
-                            explora cómo el desarrollo interno y la
-                            disciplina operativa impulsan trayectorias
-                            que evolucionan hacia roles de liderazgo.
-                        </p>
+                        <span class="insight-date"><?php echo esc_html( get_the_date() ); ?></span>
+                        <a href="<?php the_permalink(); ?>" class="insight-title"><?php the_title(); ?></a>
+                        <p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                <div class="insight-card animate-fade-up delay-1">
-                    <a href="#">
-                        <img
-                            class="insight-card-img"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri(),
-                            ); ?>/assets/images/marcas/thumbnails/mcdonalds.png"
-                            alt=""
-                        />
-                    </a>
-                    <div class="insight-card-body">
-                        <span class="insight-date">1 enero, 2026</span>
-                        <a href="#" class="insight-title"
-                            >De la operación al liderazgo: cómo se
-                            construyen carreras dentro del grupo</a
-                        >
-                        <p>
-                            Detrás de cada unidad de negocio hay
-                            historias de crecimiento real. Este artículo
-                            explora cómo el desarrollo interno y la
-                            disciplina operativa impulsan trayectorias
-                            que evolucionan hacia roles de liderazgo.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                <div class="insight-card animate-fade-up delay-2">
-                    <a href="#">
-                        <img
-                            class="insight-card-img"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri(),
-                            ); ?>/assets/images/marcas/thumbnails/mcdonalds.png"
-                            alt=""
-                        />
-                    </a>
-                    <div class="insight-card-body">
-                        <span class="insight-date">1 enero, 2026</span>
-                        <a href="#" class="insight-title"
-                            >De la operación al liderazgo: cómo se
-                            construyen carreras dentro del grupo</a
-                        >
-                        <p>
-                            Detrás de cada unidad de negocio hay
-                            historias de crecimiento real. Este artículo
-                            explora cómo el desarrollo interno y la
-                            disciplina operativa impulsan trayectorias
-                            que evolucionan hacia roles de liderazgo.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php $i++; endwhile; wp_reset_postdata(); ?>
         </div>
+        <?php endif; ?>
     </div>
 </section>
 
