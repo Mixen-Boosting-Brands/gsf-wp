@@ -26,8 +26,8 @@ get_header(); ?>
                         <a href="tel:+526144255315">+52 614 425 5315</a>
                     </li>
                     <li>
-                        <a href="mailto:contacto@gruposanfco.com"
-                            >contacto@gruposanfco.com</a
+                        <a href="mailto:comunicacion@gsfcorp.com.mx"
+                            >comunicacion@gsfcorp.com.mx</a
                         >
                     </li>
                     <li>
