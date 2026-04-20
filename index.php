@@ -213,7 +213,9 @@
         </div>
     </div>
     <div class="gente-btn-overlay">
-        <a href="#" class="btn-rojo rounded-pill"
+        <a href="<?php echo esc_url(
+            home_url("/"),
+        ); ?>personas-y-cultura" class="btn-rojo rounded-pill"
             >Conoce nuestra cultura</a
         >
     </div>
