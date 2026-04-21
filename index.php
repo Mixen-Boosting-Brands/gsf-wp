@@ -20,19 +20,27 @@
         </div>
     </div>
 
-    <!-- Imagen hero -->
+    <!-- Video hero -->
     <div class="hero-img-wrap animate-fade-up delay-1">
-        <!-- Sustituye el src por la imagen real de la ciudad -->
-        <img
-            src="<?php echo esc_url(
-                get_template_directory_uri(),
-            ); ?>/assets/images/bg-hero.png"
-            alt="Vista del Cerro Coronel, Chihuahua, Chih., México"
-        />
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bg-hero.png"
+        >
+            <source
+                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/hero.mp4"
+                type="video/mp4"
+            />
+            <!-- Fallback para navegadores sin soporte de video -->
+            <img
+                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bg-hero.png"
+                alt="Vista del Cerro Coronel, Chihuahua, Chih., México"
+            />
+        </video>
         <div class="hero-btn-overlay">
-            <a href="<?php echo esc_url(
-                home_url("/"),
-            ); ?>nosotros" class="btn-negro rounded-pill"
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>nosotros" class="btn-negro rounded-pill"
                 >Conoce el grupo</a
             >
         </div>
