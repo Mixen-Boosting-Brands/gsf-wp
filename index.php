@@ -158,6 +158,16 @@
                                 />
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="grupo-img">
+                                <img
+                                    src="<?php echo esc_url(
+                                        get_template_directory_uri(),
+                                    ); ?>/assets/images/bg-grupo-empresarial-6.png"
+                                    alt="Equipo de trabajo"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
