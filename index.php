@@ -27,20 +27,28 @@
             muted
             loop
             playsinline
-            poster="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bg-hero.png"
+            poster="<?php echo esc_url(
+                get_template_directory_uri(),
+            ); ?>/assets/images/bg-hero.png"
         >
             <source
-                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/hero.mp4"
+                src="<?php echo esc_url(
+                    get_template_directory_uri(),
+                ); ?>/assets/videos/hero.mp4"
                 type="video/mp4"
             />
             <!-- Fallback para navegadores sin soporte de video -->
             <img
-                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bg-hero.png"
+                src="<?php echo esc_url(
+                    get_template_directory_uri(),
+                ); ?>/assets/images/bg-hero.png"
                 alt="Vista del Cerro Coronel, Chihuahua, Chih., México"
             />
         </video>
         <div class="hero-btn-overlay">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>nosotros" class="btn-negro rounded-pill"
+            <a href="<?php echo esc_url(
+                home_url("/"),
+            ); ?>nosotros" class="btn-negro rounded-pill"
                 >Conoce el grupo</a
             >
         </div>
@@ -105,7 +113,7 @@
                                 <img
                                     src="<?php echo esc_url(
                                         get_template_directory_uri(),
-                                    ); ?>/assets/images/bg-grupo-empresarial.png"
+                                    ); ?>/assets/images/bg-grupo-empresarial-1.png"
                                     alt="Equipo de trabajo"
                                 />
                             </div>
@@ -115,7 +123,37 @@
                                 <img
                                     src="<?php echo esc_url(
                                         get_template_directory_uri(),
-                                    ); ?>/assets/images/bg-grupo-empresarial.png"
+                                    ); ?>/assets/images/bg-grupo-empresarial-2.png"
+                                    alt="Equipo de trabajo"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grupo-img">
+                                <img
+                                    src="<?php echo esc_url(
+                                        get_template_directory_uri(),
+                                    ); ?>/assets/images/bg-grupo-empresarial-3.png"
+                                    alt="Equipo de trabajo"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grupo-img">
+                                <img
+                                    src="<?php echo esc_url(
+                                        get_template_directory_uri(),
+                                    ); ?>/assets/images/bg-grupo-empresarial-4.png"
+                                    alt="Equipo de trabajo"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grupo-img">
+                                <img
+                                    src="<?php echo esc_url(
+                                        get_template_directory_uri(),
+                                    ); ?>/assets/images/bg-grupo-empresarial-5.png"
                                     alt="Equipo de trabajo"
                                 />
                             </div>
