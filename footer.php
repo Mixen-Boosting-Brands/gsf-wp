@@ -31,11 +31,14 @@
                             Conectando experiencias,<br />marcas y personas.
                         </h1>
                         <div class="footer-social mt-2">
-                            <a href="https://www.instagram.com/gsfcorp/" target="_blank"
+                            <a href="https://www.instagram.com/gsf_mexico/" target="_blank"
                                 ><i class="fa-brands fa-instagram"></i
                             ></a>
-                            <a href="https://www.facebook.com/p/Grupo-San-Francisco-61560142205094/" target="_blank"
+                            <a href="https://www.facebook.com/gsf.mexico/" target="_blank"
                                 ><i class="fa-brands fa-facebook-f"></i
+                            ></a>
+                            <a href="https://www.linkedin.com/company/gsf-grupo-san-francisco/" target="_blank"
+                                ><i class="fa-brands fa-linkedin-in"></i
                             ></a>
                         </div>
                     </div>

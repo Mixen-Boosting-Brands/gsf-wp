@@ -217,7 +217,7 @@
             <div class="col-lg-3">
                 <div class="cifra-card animate-fade-up delay-2">
                     <div class="cifra-card-inner">
-                        <div class="cifra-numero">+800</div>
+                        <div class="cifra-numero">+1,500</div>
                         <div class="cifra-label">Colaboradores</div>
                         <i class="fa-solid fa-users cifra-icon"></i>
                     </div>
