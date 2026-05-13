@@ -49,7 +49,7 @@ window.addEventListener('load', function () {
                             $('#nombre').val('');
                             $('#telefono').val('');
                             $('#correo').val('');
-                            $('#ciudad').val('');
+                            $('#empresa').val('');
                             $('#mensaje').val('');
                         }, 5000);
                     },
@@ -59,8 +59,6 @@ window.addEventListener('load', function () {
                         $(formMessages).removeClass('success');
                         $(formMessages).addClass('error');
 
-                        // Set the message text.
-                        $(formMessages).text(response);
                         console.log(response);
 
                         setTimeout(function () {
@@ -70,7 +68,7 @@ window.addEventListener('load', function () {
                             $('#nombre').val('');
                             $('#telefono').val('');
                             $('#correo').val('');
-                            $('#ciudad').val('');
+                            $('#empresa').val('');
                             $('#mensaje').val('');
                         }, 5000);
 
