@@ -26,6 +26,10 @@
         ); ?>" href="<?php bloginfo("rss2_url"); ?>" />
 
         <?php wp_head(); ?>
+
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/51057652.js"></script>
+        <!-- End of HubSpot Embed Code -->
     </head>
 
     <body>
