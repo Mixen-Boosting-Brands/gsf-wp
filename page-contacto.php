@@ -47,7 +47,7 @@ get_header(); ?>
             </div>
             <div class="col-lg-6 my-auto animate-fade-up delay-1">
                 <form
-                    action="./mailer.php"
+                    action="<?php echo get_template_directory_uri(); ?>/mailer.php"
                     method="POST"
                     class="row g-3 needs-validation contact-form mt-4"
                     id="ajax-contact"
