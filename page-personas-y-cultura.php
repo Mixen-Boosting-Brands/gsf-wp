@@ -220,7 +220,7 @@ get_header(); ?>
 
 <!-- ═══ TRAYECTORIAS ═══════════════════════════ -->
 <section class="seccion-tipo-1-section overflow-hidden">
-    <div class="container-fluid px-0">
+    <div class="container px-0">
         <div class="row g-0">
             <!-- Imagen -->
             <!-- div class="col-lg-6 order-lg-1 order-2">
