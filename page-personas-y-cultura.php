@@ -223,7 +223,7 @@ get_header(); ?>
     <div class="container-fluid px-0">
         <div class="row g-0">
             <!-- Imagen -->
-            <div class="col-lg-6 order-lg-1 order-2">
+            <!-- div class="col-lg-6 order-lg-1 order-2">
                 <div class="seccion-tipo-2-img">
                     <img
                         src="<?php echo esc_url(
@@ -232,10 +232,10 @@ get_header(); ?>
                         alt="Marcas que confían en nuestra operación"
                     />
                 </div>
-            </div>
+            </div -->
 
             <!-- Texto rojo -->
-            <div class="col-lg-6 order-lg-2 order-1">
+            <div class="col-12 order-1">
                 <div class="seccion-tipo-1-texto animate-fade-up">
                     <h2>Trayectorias que construyen el grupo</h2>
                     <p>
