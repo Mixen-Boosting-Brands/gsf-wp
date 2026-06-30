@@ -315,7 +315,7 @@
     </div>
 </section>
 
-<!-- ═══ INSIGHTS ════════════════════════════════════════ -->
+<!-- ═══ INSIGHTS (desactivado — contenido migrado a plataforma externa) ═══
 <section class="insights-section">
     <div class="container">
         <h2 class="section-title animate-fade-up">
@@ -374,6 +374,38 @@
             ?>
         </div>
         <?php endif; ?>
+    </div>
+</section>
+═══ /INSIGHTS ══════════════════════════════════════════════════════════════ -->
+
+<!-- ═══ INSIGHTS BANNER ══════════════════════════════════ -->
+<section class="insights-banner-section">
+    <img
+        class="insights-banner-bg"
+        src="<?php echo esc_url(
+            get_template_directory_uri(),
+        ); ?>/assets/images/bg-trayectorias.png"
+        alt="Insights Grupo San Francisco"
+    />
+    <div class="container insights-banner-content">
+        <div class="row">
+            <div class="col-lg-8 animate-fade-up">
+                <h2>Insights que<br />construyen.</h2>
+                <p>
+                    Perspectivas, aprendizajes y experiencias que reflejan cómo
+                    operamos, crecemos y generamos valor en cada industria.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="insights-banner-btn-overlay">
+        <a
+            href="#"
+            class="btn-rojo rounded-pill"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Leer insights</a
+        >
     </div>
 </section>
 
