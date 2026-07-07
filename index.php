@@ -400,7 +400,7 @@
     </div>
     <div class="insights-banner-btn-overlay">
         <a
-            href="#"
+            href="https://landing.gsfcorp.com.mx/blog"
             class="btn-rojo rounded-pill"
             target="_blank"
             rel="noopener noreferrer"
